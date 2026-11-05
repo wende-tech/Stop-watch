@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container": "#1e2022", "tertiary-container": "#ffc1bd", "surface-container-highest": "#333537", "primary-fixed": "#9cf0ff", "on-primary": "#00363d", "primary-container": "#00e5ff", "error": "#ffb4ab", "inverse-surface": "#e2e2e5", "tertiary": "#ffe7e5", "surface-container-lowest": "#0c0e10", "primary-fixed-dim": "#00daf3", "on-background": "#e2e2e5", "primary": "#c3f5ff", "secondary-container": "#fd9000", "on-secondary-container": "#613400", "on-error": "#690005", "on-primary-fixed": "#001f24", "surface-tint": "#00daf3", "surface-variant": "#333537", "on-secondary-fixed": "#2e1500", "tertiary-fixed": "#ffdad7", "surface-container-high": "#282a2c", "on-tertiary-fixed": "#410004", "background": "#121416", "on-error-container": "#ffdad6", "on-primary-container": "#00626e", "on-tertiary-fixed-variant": "#930015", "secondary-fixed": "#ffdcc1", "on-tertiary": "#68000c", "on-tertiary-container": "#b01522", "on-secondary-fixed-variant": "#6c3a00", "surface": "#121416", "tertiary-fixed-dim": "#ffb3ae", "error-container": "#93000a", "surface-bright": "#38393c", "surface-dim": "#121416", "outline-variant": "#3b494c", "on-secondary": "#4c2700", "secondary-fixed-dim": "#ffb778", "on-surface": "#e2e2e5", "on-surface-variant": "#bac9cc", "inverse-primary": "#006875", "surface-container-low": "#1a1c1e", "inverse-on-surface": "#2f3133", "on-primary-fixed-variant": "#004f58", "secondary": "#ffb778", "outline": "#849396" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "margin": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-2xl": "3rem", "gutter-desktop": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-tablet": "1.5rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter": "1rem", "space-xl": "2rem" }, fontFamily: { "label-lg": ["JetBrains Mono"], "body-lg": ["Roboto Flex"], "title-lg": ["Roboto Flex"], "display-md": ["JetBrains Mono"], "headline-md": ["JetBrains Mono"], "display-lg": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg": ["JetBrains Mono"], "display-lg-mobile": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "body-md": ["Roboto Flex"], "title-md": ["Roboto Flex"] }, fontSize: { "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "0.02em", "fontWeight": "400" }], "title-lg": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "0", "fontWeight": "600" }], "display-md": ["3rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "0", "fontWeight": "500" }], "display-lg": ["5rem", { "lineHeight": "5rem", "letterSpacing": "-0.04em", "fontWeight": "700" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.08em", "fontWeight": "500" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["3.5rem", { "lineHeight": "3.75rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.02em", "fontWeight": "400" }], "title-md": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#121416;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Chronos Timer Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1WYKEkgkirSEOAXg5Hh1h91TRY1L_PK3NFjNU8D5JiTark2cChQRrSKqPsbyeGurc84H0hgfdvCvj_Y9H5PkAajA5A6r3WfDHbHQb84yjyM2MxmeaVrTKFr4bR_dssVRLiR8ER4rCJLYac--b0AV5gOmTX8Gayd7GIUJjZbmad9xdYm9VfpzlJiV22op4LBEOYrfjVfaMzE-G-Km8Kz9i8xqBkFjHBtJjdP5vVjw7M77Q"/><div class="flex flex-col min-w-0"><span class="font-title-md text-title-md text-on-surface truncate">Chronos Timer</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider truncate">Presets</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle sound" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">volume_up</span></button><button aria-label="Toggle dark theme" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">dark_mode</span></button><button aria-label="Settings" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">settings</span></button><div class="w-8 h-8 ml-space-xs rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-2xl space-y-space-lg">
+<!-- Search & Primary Creation Bar -->
+<section class="flex flex-col w-full space-y-space-sm pt-space-xs">
+<div class="flex items-center gap-space-sm w-full">
+<div class="flex-1 flex items-center h-12 px-space-md bg-surface-container-low rounded-full shadow-sm focus-within:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0 mr-space-sm">search</span>
+<input class="w-full bg-transparent border-0 outline-none text-on-surface placeholder:text-outline font-body-md text-body-md" id="preset-search-input" placeholder="Search presets, sounds, intervals..." type="text"/>
+<button aria-label="Clear search" class="hidden text-on-surface-variant hover:text-on-surface p-1" id="search-clear-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Action Button: New Preset -->
+<button class="h-12 px-space-md bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-full flex items-center justify-center gap-space-xs shadow-[0_0_20px_rgba(0,229,255,0.25)] active:scale-95 transition-all shrink-0" id="btn-create-preset">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="hidden sm:inline">New Preset</span>
+</button>
+</div>
+<!-- Category Filter Tabs Horizontal Rail -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-xs -mx-margin px-margin">
+<button class="filter-tab active-tab shrink-0 h-9 px-space-md rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1 shadow-sm transition-all" data-category="all">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+<span>All (6)</span>
+</button>
+<button class="filter-tab shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container transition-all" data-category="productivity">
+<span class="material-symbols-outlined text-[16px]">target</span>
+<span>Productivity</span>
+</button>
+<button class="filter-tab shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container transition-all" data-category="fitness">
+<span class="material-symbols-outlined text-[16px]">fitness_center</span>
+<span>Fitness</span>
+</button>
+<button class="filter-tab shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container transition-all" data-category="cooking">
+<span class="material-symbols-outlined text-[16px]">skillet</span>
+<span>Cooking</span>
+</button>
+<button class="filter-tab shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container transition-all" data-category="daily">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Daily</span>
+</button>
+</div>
+</section>
+<!-- Ambient Visual Highlights / Quick Routine Card -->
+<section class="relative overflow-hidden rounded-lg bg-surface-container-low p-space-md flex items-center justify-between shadow-sm">
+<div class="relative z-10 flex flex-col space-y-1 max-w-[70%]">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Active Routine</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Morning Deep Flow</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Pomodoro 25m • 4 Cycles • Ambient Zen</p>
+</div>
+<div class="relative z-10 shrink-0">
+<button class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_16px_rgba(0,229,255,0.3)] active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Soft Decorative Glow -->
+<div class="absolute -right-8 -bottom-8 w-36 h-36 rounded-full bg-primary-fixed-dim/10 blur-2xl pointer-events-none"></div>
+</section>
+<!-- Presets List Grid -->
+<section class="flex flex-col space-y-space-sm w-full" id="presets-grid">
+<!-- Preset 1: Pomodoro Focus -->
+<div class="preset-card group relative bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-200" data-category="productivity" data-sound="Bell ring" data-title="Pomodoro Focus">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-primary-fixed/20 text-primary-fixed-dim flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">timelapse</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface truncate">Pomodoro Focus</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-primary-fixed/15 text-primary">
+                Productivity
+              </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant flex-wrap">
+<span class="font-display-md text-headline-md text-primary font-label-lg tracking-tight">25:00</span>
+<span class="text-outline">•</span>
+<span class="font-body-md text-body-md">4 Intervals</span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+                Bell ring
+              </span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="menu-trigger w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<button aria-label="Start Pomodoro Focus" class="w-11 h-11 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_16px_rgba(0,229,255,0.25)] active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Micro visual progress indicator -->
+<div class="mt-space-sm w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-full"></div>
+</div>
+</div>
+<!-- Preset 2: Short Break -->
+<div class="preset-card group relative bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-200" data-category="productivity" data-sound="Soft Chime" data-title="Short Break">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-emerald-950/40 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">coffee</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface truncate">Short Break</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-emerald-950/50 text-emerald-300">
+                Productivity
+              </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant flex-wrap">
+<span class="font-display-md text-headline-md text-emerald-400 font-label-lg tracking-tight">05:00</span>
+<span class="text-outline">•</span>
+<span class="font-body-md text-body-md">Single Cycle</span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+                Soft Chime
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="menu-trigger w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<button aria-label="Start Short Break" class="w-11 h-11 rounded-full bg-surface-container-high text-on-surface hover:text-emerald-400 flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mt-space-sm w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-emerald-400 h-full rounded-full w-1/5"></div>
+</div>
+</div>
+<!-- Preset 3: Long Break -->
+<div class="preset-card group relative bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-200" data-category="productivity" data-sound="Digital Synth" data-title="Long Break">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-sky-950/40 text-sky-400 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">park</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface truncate">Long Break</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-sky-950/50 text-sky-300">
+                Productivity
+              </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant flex-wrap">
+<span class="font-display-md text-headline-md text-sky-400 font-label-lg tracking-tight">15:00</span>
+<span class="text-outline">•</span>
+<span class="font-body-md text-body-md">Post-Cycle Rest</span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+                Digital Synth
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="menu-trigger w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<button aria-label="Start Long Break" class="w-11 h-11 rounded-full bg-surface-container-high text-on-surface hover:text-sky-400 flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mt-space-sm w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-sky-400 h-full rounded-full w-3/5"></div>
+</div>
+</div>
+<!-- Preset 4: HIIT Interval -->
+<div class="preset-card group relative bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-200" data-category="fitness" data-sound="Double Gong" data-title="HIIT Interval">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 text-secondary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">local_fire_department</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface truncate">HIIT Interval</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container/25 text-secondary">
+                Fitness
+              </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant flex-wrap">
+<span class="font-display-md text-headline-md text-secondary font-label-lg tracking-tight">00:45 / 00:15</span>
+<span class="text-outline">•</span>
+<span class="font-body-md text-body-md">8 Rounds Work/Rest</span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+                Double Gong
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="menu-trigger w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<button aria-label="Start HIIT Interval" class="w-11 h-11 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_0_16px_rgba(253,144,0,0.25)] active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mt-space-sm w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full w-3/4"></div>
+</div>
+</div>
+<!-- Preset 5: Quick Tea Steep -->
+<div class="preset-card group relative bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-200" data-category="cooking" data-sound="Wind Chimes" data-title="Quick Tea Steep">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-amber-950/40 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">emoji_food_beverage</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface truncate">Quick Tea Steep</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-amber-950/50 text-amber-300">
+                Cooking
+              </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant flex-wrap">
+<span class="font-display-md text-headline-md text-amber-400 font-label-lg tracking-tight">03:00</span>
+<span class="text-outline">•</span>
+<span class="font-body-md text-body-md">Green / Oolong</span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+                Wind Chimes
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="menu-trigger w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<button aria-label="Start Quick Tea Steep" class="w-11 h-11 rounded-full bg-surface-container-high text-on-surface hover:text-amber-400 flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mt-space-sm w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-amber-400 h-full rounded-full w-1/4"></div>
+</div>
+</div>
+<!-- Preset 6: Pasta Timer -->
+<div class="preset-card group relative bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md shadow-sm transition-all duration-200" data-category="cooking" data-sound="Kitchen Buzz" data-title="Pasta Timer">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">soup_kitchen</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface truncate">Pasta Timer</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-container/30 text-tertiary">
+                Cooking
+              </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant flex-wrap">
+<span class="font-display-md text-headline-md text-tertiary font-label-lg tracking-tight">09:00</span>
+<span class="text-outline">•</span>
+<span class="font-body-md text-body-md">Al Dente Boil</span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+                Kitchen Buzz
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="menu-trigger w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<button aria-label="Start Pasta Timer" class="w-11 h-11 rounded-full bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container hover:text-on-tertiary-container flex items-center justify-center active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mt-space-sm w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full w-2/3"></div>
+</div>
+</div>
+</section>
+<!-- Empty State (Hidden by default) -->
+<div class="hidden flex flex-col items-center justify-center text-center p-space-xl bg-surface-container-low rounded-lg space-y-space-sm" id="empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">manage_search</span>
+</div>
+<div class="flex flex-col space-y-1">
+<p class="font-title-md text-title-md text-on-surface">No presets found</p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+        Try modifying your search or pick another category filter.
+      </p>
+</div>
+<button class="mt-space-xs px-space-md h-10 rounded-full bg-surface-container-high text-primary font-label-md text-label-md" id="reset-filter-btn">
+      Reset Filters
+    </button>
+</div>
+<!-- Micro Context Action Modal / Menu Sheet (Custom Simple Android Dropdown) -->
+<div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-end justify-center sm:items-center p-0 sm:p-margin" id="action-sheet">
+<div class="w-full max-w-md bg-surface-container-high rounded-t-xl sm:rounded-lg p-space-md shadow-2xl flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface" id="sheet-preset-title">Preset Settings</span>
+<span class="font-label-sm text-label-sm text-primary">MANAGE ROUTINE</span>
+</div>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="close-sheet-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1">
+<button class="sheet-action flex items-center gap-space-sm p-3 rounded-full hover:bg-surface-container text-left text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-primary">edit</span>
+<span class="font-body-md text-body-md font-medium">Edit Intervals &amp; Time</span>
+</button>
+<button class="sheet-action flex items-center gap-space-sm p-3 rounded-full hover:bg-surface-container text-left text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-secondary">notifications_active</span>
+<span class="font-body-md text-body-md font-medium">Change Sound Alert</span>
+</button>
+<button class="sheet-action flex items-center gap-space-sm p-3 rounded-full hover:bg-surface-container text-left text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">content_copy</span>
+<span class="font-body-md text-body-md font-medium">Duplicate Preset</span>
+</button>
+<button class="sheet-action flex items-center gap-space-sm p-3 rounded-full hover:bg-error-container/30 text-left text-error">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+<span class="font-body-md text-body-md font-medium">Delete Preset</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Feedback Element -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-2.5 rounded-full font-label-md text-label-md shadow-lg pointer-events-none opacity-0 transition-opacity duration-300 flex items-center gap-2" id="toast">
+<span class="material-symbols-outlined text-[18px] text-primary-container">check_circle</span>
+<span id="toast-message">Timer started</span>
+</div>
+</div>
+<script>
+  (function () {
+    const searchInput = document.getElementById('preset-search-input');
+    const clearBtn = document.getElementById('search-clear-btn');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.preset-card');
+    const emptyState = document.getElementById('empty-state');
+    const resetFilterBtn = document.getElementById('reset-filter-btn');
+    const actionSheet = document.getElementById('action-sheet');
+    const closeSheetBtn = document.getElementById('close-sheet-btn');
+    const sheetPresetTitle = document.getElementById('sheet-preset-title');
+    const menuTriggers = document.querySelectorAll('.menu-trigger');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    const newPresetBtn = document.getElementById('btn-create-preset');
+
+    let currentCategory = 'all';
+
+    function showToast(text) {
+      toastMsg.textContent = text;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2200);
+    }
+
+    function applyFilter() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const category = card.dataset.category || '';
+        const title = (card.dataset.title || '').toLowerCase();
+        const sound = (card.dataset.sound || '').toLowerCase();
+
+        const matchesCat = currentCategory === 'all' || category === currentCategory;
+        const matchesQuery = query === '' || title.includes(query) || sound.includes(query);
+
+        if (matchesCat && matchesQuery) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+
+      if (query.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+    }
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.classList.remove('bg-primary-container', 'text-on-primary-container', 'active-tab');
+          t.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        tab.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        tab.classList.add('bg-primary-container', 'text-on-primary-container', 'active-tab');
+        currentCategory = tab.dataset.category || 'all';
+        applyFilter();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilter);
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFilter();
+      searchInput.focus();
+    });
+
+    resetFilterBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      currentCategory = 'all';
+      filterTabs.forEach(t => {
+        if (t.dataset.category === 'all') {
+          t.classList.add('bg-primary-container', 'text-on-primary-container', 'active-tab');
+          t.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        } else {
+          t.classList.remove('bg-primary-container', 'text-on-primary-container', 'active-tab');
+          t.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        }
+      });
+      applyFilter();
+    });
+
+    // 3-dots Menu modal interaction
+    menuTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.preset-card');
+        const title = card ? card.dataset.title : 'Preset Settings';
+        sheetPresetTitle.textContent = title;
+        actionSheet.classList.remove('hidden');
+      });
+    });
+
+    closeSheetBtn.addEventListener('click', () => {
+      actionSheet.classList.add('hidden');
+    });
+
+    actionSheet.addEventListener('click', (e) => {
+      if (e.target === actionSheet) {
+        actionSheet.classList.add('hidden');
+      }
+    });
+
+    document.querySelectorAll('.sheet-action').forEach(btn => {
+      btn.addEventListener('click', () => {
+        actionSheet.classList.add('hidden');
+        showToast('Settings updated');
+      });
+    });
+
+    // Play action buttons
+    document.querySelectorAll('[aria-label^="Start"]').forEach(playBtn => {
+      playBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const label = playBtn.getAttribute('aria-label').replace('Start ', '');
+        showToast(`Running "${label}"...`);
+      });
+    });
+
+    newPresetBtn.addEventListener('click', () => {
+      sheetPresetTitle.textContent = 'Create Custom Preset';
+      actionSheet.classList.remove('hidden');
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary-container [&amp;_span.icon-indicator]:bg-primary-container/15 [&amp;_span.icon-indicator]:text-primary-container [&amp;_span.nav-label]:font-label-md [&amp;_span.nav-label]:text-primary"><div class="flex justify-around items-center h-20 px-space-xs max-w-lg mx-auto"><a class="flex flex-col items-center justify-center min-w-[4rem] h-14 text-on-surface-variant hover:text-on-surface transition-all" data-path="timer" href="#"><span class="icon-indicator w-14 h-8 rounded-full flex items-center justify-center mb-1 transition-all"><span class="material-symbols-outlined text-[24px]">hourglass_top</span></span><span class="nav-label font-label-sm text-label-sm tracking-wide">Timer</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[4rem] h-14 transition-all text-primary-container [&amp;_span.icon-indicator]:bg-primary-container/15 [&amp;_span.icon-indicator]:text-primary-container [&amp;_span.nav-label]:font-label-md [&amp;_span.nav-label]:text-primary" data-path="presets" href="#"><span class="icon-indicator w-14 h-8 rounded-full flex items-center justify-center mb-1 transition-all"><span class="material-symbols-outlined text-[24px]">tune</span></span><span class="nav-label font-label-sm text-label-sm tracking-wide">Presets</span></a><a class="flex flex-col items-center justify-center min-w-[4rem] h-14 text-on-surface-variant hover:text-on-surface transition-all" data-path="sound-and-alerts" href="#"><span class="icon-indicator w-14 h-8 rounded-full flex items-center justify-center mb-1 transition-all"><span class="material-symbols-outlined text-[24px]">notifications_active</span></span><span class="nav-label font-label-sm text-label-sm tracking-wide">Alerts</span></a><a class="flex flex-col items-center justify-center min-w-[4rem] h-14 text-on-surface-variant hover:text-on-surface transition-all" data-path="history-and-logs" href="#"><span class="icon-indicator w-14 h-8 rounded-full flex items-center justify-center mb-1 transition-all"><span class="material-symbols-outlined text-[24px]">history</span></span><span class="nav-label font-label-sm text-label-sm tracking-wide">History</span></a></div></nav></body></html>
